@@ -12,5 +12,5 @@ You need to install [Cookiecutter](https://github.com/audreyr/cookiecutter) befo
 Command line:
 
 ```
-cookiecutter gh:hiraq/cookiecutter-typhoon
+cookiecutter https://github.com/hiraq/cookiecutter-typhoon 
 ```
