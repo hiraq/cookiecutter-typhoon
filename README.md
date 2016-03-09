@@ -1,5 +1,5 @@
 # cookiecutter-typhoon
-Generage project template for Typhoon using Python's Cookiecutter
+Generage project template for [Typhoon](https://github.com/hiraq/typhoon) using Python's Cookiecutter
 
 ### Version
 
@@ -12,5 +12,5 @@ You need to install [Cookiecutter](https://github.com/audreyr/cookiecutter) befo
 Command line:
 
 ```
-cookiecutter https://github.com/hiraq/cookiecutter-typhoon 
+cookiecutter https://github.com/hiraq/cookiecutter-typhoon
 ```
