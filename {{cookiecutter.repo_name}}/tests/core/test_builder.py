@@ -16,7 +16,8 @@ class FakeYamlObject(object):
     method to add key, value
     """
 
-    props = {}
+    def __init__(self):
+        self.props = {}
 
     def set(self, key, value):
         self.props[key] = value
@@ -24,7 +25,7 @@ class FakeYamlObject(object):
     def get(self, key):
         self.props[key]
 
-class TestTyphoon(unittest.TestCase):
+class TestBuilder(unittest.TestCase):
 
     def test_build_env_mock_simple(self):
         """
@@ -97,3 +98,17 @@ class TestTyphoon(unittest.TestCase):
 
         build.logs(env, logger)
         self.assertEqual(logging.DEBUG, logger.getEffectiveLevel())
+
+    def test_build_settings_real(self):
+        build = Builder()
+        config = build.env('env_test.yml')
+
+        settings = build.settings(config)
+        self.assertIn('session', settings)
+
+    def test_build_settings_no_session(self):
+        build = Builder()
+        config = build.env('env_test.yml', env_name="DEV_NO_SESSION")
+
+        settings = build.settings(config)
+        self.assertNotIn('session', settings)
