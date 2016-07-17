@@ -13,4 +13,4 @@ cookiecutter https://github.com/hiraq/cookiecutter-typhoon
 
 ### Current Typhoon's Version
 
-`v0.4.1`
+`v0.4.2`
